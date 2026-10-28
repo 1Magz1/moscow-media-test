@@ -1,7 +1,7 @@
 <template>
 	<div
 		ref="target"
-		class="relative rounded-full bg-ring/40 ring-container shrink-0"
+		class="relative rounded-full bg-ring ring-container shrink-0"
 		:class="sizeClass"
 	>
 		<div

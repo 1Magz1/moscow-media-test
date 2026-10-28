@@ -2,10 +2,10 @@
 
 @theme {
 	/* Объявляем кастомные цвета */
-	--color-bg: #d6b97b;
-	--color-brown: #7a4a34;
-	--color-text: #333333;
-	--color-ring: #a67b45;
+	--color-bg: #d2b877;
+	--color-brown: #8a4329;
+	--color-text: #4a1c0c;
+	--color-ring: #cca359;
 	--color-decor: #c17f39;
 
 	/* Объявляем кастомный шрифт */
