@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import TimelineItem from './components/TimelineItem.vue';
+import HorseTicker from './components/HorseTicker.vue';
 import { timelineData } from './data/timeline';
 </script>
 
 <template>
-    <div class="text-center my-16">
+    <HorseTicker/>
+    <div class="text-center my-18">
       <h1 class="text-5xl font-bold text-white uppercase tracking-wider drop-shadow-md">
         История московского<br/>ипподрома
       </h1>
