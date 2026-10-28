@@ -19,6 +19,7 @@
                 :alt="item.title"
                 size-class="w-64 h-64"
                 inner-inset="inset-[10%]"
+                @click="openLightbox(item)"
             />
             <div class="text-center flex flex-col gap-3 px-2">
                 <h2 class="text-2xl font-bold text-brown uppercase tracking-wide">
@@ -33,19 +34,27 @@
         </Swiper>
 
         <button class="custom-nav-btn custom-nav-prev" aria-label="Назад">
-        <img src="../assets/images/arrow.png" alt="" class="w-6 h-6" />
+            <img src="../assets/images/arrow.png" alt="" class="w-6 h-6" />
         </button>
         <button class="custom-nav-btn custom-nav-next" aria-label="Вперёд">
-        <img src="../assets/images/arrow.png" alt="" class="w-6 h-6 rotate-180" />
+            <img src="../assets/images/arrow.png" alt="" class="w-6 h-6 rotate-180" />
         </button>
+        <Lightbox
+            :is-open="!!activeImage"
+            :src="activeImage?.image || ''"
+            :alt="activeImage?.title || ''"
+            @close="activeImage = null"
+    />
     </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import type { TimelineCard } from '../data/timeline';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation, Pagination } from 'swiper/modules';
 import Medallion from './Medallion.vue';
+import Lightbox from './Lightbox.vue';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -56,6 +65,12 @@ defineProps<{
 }>();
 
 const modules = [Navigation, Pagination];
+
+const activeImage = ref<TimelineCard | null>(null);
+
+const openLightbox = (item: TimelineCard) => {
+    activeImage.value = item;
+};
 </script>
 
 <style scoped>

@@ -6,6 +6,7 @@
         <div
             class="absolute rounded-full overflow-hidden cursor-pointer group z-10"
             :class="innerInset"
+            @click="$emit('click')"
         >
         <img
             :src="image"
@@ -32,6 +33,10 @@ const props = withDefaults(defineProps<{
     sizeClass: 'w-80 h-80',
     innerInset: 'inset-10',
 });
+
+defineEmits<{
+    (e: 'click'): void;
+}>();
 </script>
 
 <style scoped>
