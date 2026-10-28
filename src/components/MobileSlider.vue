@@ -18,7 +18,7 @@
                 :image="item.image"
                 :alt="item.title"
                 size-class="w-64 h-64"
-                inner-inset="inset-[10%]"
+                inner-inset="inset-[14%] md:inset-[10%]"
                 @click="openLightbox(item)"
             />
             <div class="text-center flex flex-col gap-3 px-2">
