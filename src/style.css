@@ -1,23 +1,23 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  /* Объявляем кастомные цвета */
-  --color-bg: #d6b97b;
-  --color-brown: #7a4a34;
-  --color-text: #333333;
-  --color-ring: #a67b45;
-  --color-decor: #c17f39;
+	/* Объявляем кастомные цвета */
+	--color-bg: #d6b97b;
+	--color-brown: #7a4a34;
+	--color-text: #333333;
+	--color-ring: #a67b45;
+	--color-decor: #c17f39;
 
-  /* Объявляем кастомный шрифт */
-  --font-montserrat: "Montserrat", sans-serif;
+	/* Объявляем кастомный шрифт */
+	--font-montserrat: 'Montserrat', sans-serif;
 }
 
 /* Базовые стили для body */
 body {
-  background-color: var(--color-bg);
-  font-family: var(--font-montserrat);
-  color: var(--color-text);
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
+	background-color: var(--color-bg);
+	font-family: var(--font-montserrat);
+	color: var(--color-text);
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
 }
