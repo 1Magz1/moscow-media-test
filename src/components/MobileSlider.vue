@@ -116,4 +116,20 @@ const openLightbox = (item: TimelineCard) => {
 	opacity: 1;
 	transform: scale(1.2);
 }
+:deep(.swiper-pagination-bullet) {
+	width: 14px;
+	height: 14px;
+	background: var(--color-brown);
+	opacity: 0.3;
+	border: 1px solid var(--color-brown);
+	margin: 0 6px !important;
+	transition: all 0.3s ease;
+	background: none;
+}
+
+:deep(.swiper-pagination-bullet-active) {
+	opacity: 1;
+	transform: scale(1.2);
+	background: var(--color-brown);
+}
 </style>
