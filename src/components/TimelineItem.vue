@@ -1,5 +1,5 @@
 <template>
-	<div class="flex items-center gap-12 w-full max-w-5xl mx-auto py-12">
+	<div class="flex items-center gap-12 w-full max-w-5xl mx-auto p-12">
 		<div :class="{ 'order-2': isReversed }">
 			<Medallion :image="event.image" :alt="event.title" @click="openLightbox" />
 		</div>
